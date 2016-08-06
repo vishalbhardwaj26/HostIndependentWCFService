@@ -167,7 +167,7 @@ namespace WpfClient
             ILoggerService channel = factory.CreateChannel();
 
             channel.pName(loggerempName);
-            //
+            //one more
             factory.Close();            
         }
     }
