@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBlock>Employee Service</TextBlock>
+        <ComboBox ItemsSource="{Binding GetEmployee}"></ComboBox>
+        <Button Content="Refresh" Command="{Binding RefreshListCommand}"></Button>
+         <StackPanel Orientation="Horizontal">
+                <TextBox Text="{Binding EmpName}" Width="200"></TextBox>
+                <Button Command="{Binding AddEmployeeCommand}">Add</Button>
+         </StackPanel>
+            <TextBlock Margin="0,20,0,0">Logger Service</TextBlock>
+            <ComboBox ItemsSource="{Binding LoggerGetEmployee}"></ComboBox>
+            <Button Content="Refresh" Command="{Binding LoggerRefreshListCommand}"></Button>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Text="{Binding LoggerEmpName}" Width="200"></TextBox>
+                <Button Command="{Binding LoggerAddEmployeeCommand}">Add</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
